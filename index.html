@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chess coaching</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    body {
+        font-family: 'Baloo 2', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url('chess-2.jpg');
+        background-size: cover;
+    }
+
+    .left {
+        display: inline-block;
+        /*border: 2px solid rgba(234, 115, 11, 0.686);*/
+        position: absolute;
+        left: 50px;
+        top: 10px;
+    }
+
+    .left img {
+        width: 80px;
+
+    }
+
+    .left div {
+        text-align: center;
+
+    }
+
+    .mid {
+        /* border: 2px solid rgb(73, 24, 12);*/
+        display: block;
+        width: 45%;
+        margin: 33px auto;
+
+
+    }
+
+    .right {
+        /*border: 2px solid rgb(80, 106, 189);*/
+        position: absolute;
+        right: 34px;
+        top: 46px;
+        display: inline-block;
+
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.ab {
+        text-decoration: underline;
+        color: rgb(109, 105, 105);
+    }
+
+    .btn {
+        font-family: 'Baloo 2', cursive;
+        margin: 0px 9px;
+        color: white;
+        background-color: black;
+        padding: 4px 14px;
+        border: 2px solid gray;
+        border-radius: 9px;
+        font-size: 15px;
+        cursor: pointer;
+
+    }
+
+    .btn:hover {
+        background-color: rgb(154, 106, 106);
+    }
+
+    .container {
+        border: 2px solid rgb(255, 255, 255);
+        margin: 200px 150px;
+        padding: 20px;
+        width: 33%;
+        border-radius: 28px;
+
+    }
+
+    .form-group input {
+        font-family: 'Baloo 2', cursive;
+        text-align: center;
+        display: block;
+        width: 400px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 25px;
+        border-radius: 8px;
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    .container button {
+        display: block;
+        width: 84%;
+        margin: 20px auto;
+    }
+
+    .lol {
+        color: aliceblue;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!--logo-->
+        <div class="left">
+            <img src="logo.jpg" alt="chess">
+            <div>souvik saha</div>
+
+
+        </div>
+        <!--navbar-->
+        <div class="mid">
+
+            <ul class="navbar">
+                <li><a href="#" class="ab">Home</a></li>
+                <li><a href="Pathway.html">Pathway</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Chess">About Chess</a></li>
+                <li><a href="https://www.chess.com/">practice</a></li>
+
+
+            </ul>
+        </div>
+        <!--buttons-->
+
+        <div class="right">
+            <button class="btn"><a class="lol" href="Contact Us.html">Contact Us</a></button>
+            <button class="btn"><a class="lol" href="About us.html">About Us</a></button>
+
+
+
+        </div>
+
+
+    </header>
+    <div class="container">
+        <h1> Join the best coaching in kolkata</h1>
+        <form onsubmit="return fun();" action="message.html">
+            <div class="form-group">
+                <input type="text" id="a" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <input type="text" id="b" placeholder="Enter your phone no">
+            </div>
+            <div class="form-group">
+                <input type="email" id="c" placeholder="Enter your email id">
+            </div>
+            <div class="form-group">
+                <input type="text" id="d" placeholder="Enter your locality">
+            </div>
+            <button class="btn" onclick="fun()" type="submit">submit</button>
+        </form>
+
+
+
+    </div>
+    <script>
+        function fun() {
+            var name = document.getElementById("a");
+            var number = document.getElementById("b");
+            var email = document.getElementById("c");
+            var area = document.getElementById("d");
+            if (name.value.trim() == "") {
+                alert("Your name is blank");
+                return false;
+            }
+            else if (number.value.trim() == "") {
+                alert("Your Phone no is blank");
+                return false;
+            }
+            else if (email.value.trim() == "") {
+                alert("Your email id is blank");
+                return false;
+            }
+            else if (area.value.trim() == "") {
+                alert("Your locality is blank");
+                return false;
+            }
+            else {
+                return true;
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>
